@@ -1,62 +1,68 @@
-# 🚀 Multi-Modal AI Interview Engine
-> **A real-time behavioral analytics platform using low-latency WebSocket streaming.**
+# 🤖 AI Interview Simulator with Emotion & Behavioral Analytics
+
+> An intelligent, full-stack mock interview platform designed to evaluate and improve real-time candidate behavior. This application leverages a high-performance **Next.js** presentation layer and an asynchronous **FastAPI** computing engine connected over a low-latency **WebSocket** data pipeline.
 
 ---
+
+### 🚀 Technology Stack & Badges
 
 ![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)
 ![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=FastAPI&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-
-An interactive, real-time AI interview simulator that captures webcam frames directly from a modern browser user interface and pipes them over a dual-channel **WebSocket** data lane to an asynchronous Python machine learning engine. The system computes physiological tracking signals instantly and returns automated telemetry indicators for **Emotion Extraction**, **Eye Contact Tracking**, and **Vocal Stress Diagnostics**.
-
----
-
-## 🎨 System Highlights
-* 🎛️ **Live Data Streaming:** Captures and serializes canvas image payloads over active port pipes every 1000ms.
-* 📊 **Dynamic Telemetry:** Instantaneous dashboard indicator updates with auto-fluctuating state evaluation algorithms.
-* 🔀 **Resilient Handling:** Core loops isolated with frame-level try-catch architecture to prevent packet drops from severing server connection nodes.
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![OpenCV](https://img.shields.io/badge/OpenCV-5C3EE8?style=for-the-badge&logo=opencv&logoColor=white)
 
 ---
 
-## 🛠️ Architecture Stack
+## 💡 Key Features
 
-### Presentation UI (Frontend)
-* **Framework Engine:** Next.js (App Router Layout) optimized with Turbopack compilation compiling hooks.
-* **Typing Definition:** Static TypeScript compilation wrappers.
-* **Styling Framework:** Tailwind CSS with deep slate neon micro-interaction elements.
-* **Media Controller:** React-Webcam API interface modules.
-
-### Core Processing Hub (Backend)
-* **Framework Routing:** FastAPI (High-performance asynchronous framework engine layout).
-* **Network Host Engine:** Uvicorn (Standard toolkit build handling persistent connections).
-* **Computational Processing:** Native matrix layout manipulations using numpy arrays.
+* **Real-Time Telemetry Streaming:** Captures and serializes webcam frames every **1000ms** to minimize browser overhead and prevent network congestion.
+* **Dynamic Behavioral Metrics:** Calculates and streams immediate feedback on **Emotion Consistency**, **Eye Contact Percentage**, and **Vocal Stress Markers**.
+* **Fault-Tolerant Processing Loop:** Uses frame-level isolation to prevent blurred images or dropped packets from terminating the active server connection.
+* **Interactive Transcript Timeline:** Features a conversational chat UI with instant state management to track interview questions and answers seamlessly.
 
 ---
 
-## 📂 Structural Tree
+## 🛠️ System Architecture
+
+```mermaid
+graph LR
+    A[React Client Web UI] -- 1. Capture Frame --> B(WebSocket Connection)
+    B -- 2. Byte Stream Data --> C[FastAPI Processing Hub]
+    C -- 3. OpenCV Metric Analysis --> B
+    B -- 4. Live Telemetry Updates --> A
+
+```
+
+* **Frontend Environment:** Built with **Next.js (App Router)** and **TypeScript** for robust type-safety. Tailored with a custom cinematic dark theme using **Tailwind CSS**.
+* **Backend Processing Environment:** Powered by **FastAPI** and an asynchronous event loop running **Uvicorn** to support high-concurrency client connections.
+
+---
+
+## 📂 Project Directory Structure
 
 ```text
 ai-resume/
 ├── backend/            # Python Machine Learning Backend
-│   ├── venv/           # Sandbox execution environment configuration
-│   └── main.py         # Main event pipeline and WebSocket listener loop
-└── frontend/           # Next.js Presentation Client Application
+│   ├── venv/           # Isolated environment files
+│   └── main.py         # WebSocket server & computation logic
+└── frontend/           # Next.js Presentation Application
     ├── app/
-    │   └── page.tsx    # Live telemetry and layout tracking client matrix view
-    └── package.json
+    │   └── page.tsx    # Live telemetry & interview chat interface
+    └── package.json    # Manifest file & script definitions
 
 ```
 
 ---
 
-## ⚙️ Running the Architecture Setup Locally
+## ⚙️ Local Installation & Execution
 
-Follow this simple guide to run both processing components concurrently on your Windows terminal profile lanes.
+Follow this clear execution order to launch the application components simultaneously using the Windows Command Prompt.
 
-### Terminal Window 1: Fire up the Machine Learning Server
+### 🧵 Step 1: Start the Machine Learning Backend
 
-Navigate directly into your active project backend directory path, launch your isolated sandbox environment variables, and let your server clear out duplicate ports before startup:
+Open a terminal window, navigate to your backend repository directory, activate your isolated environment sandbox, and start your computation server:
 
 ```bash
 cd Desktop/ai-resume/backend
@@ -66,11 +72,11 @@ python main.py
 
 ```
 
-> 🛈 **Verification Anchor:** Your Python backend terminal environment must sit quietly on line text reading: `Uvicorn running on http://127.0.0.1:8000`. Leave this window running continuously.
+> **Expected output anchor:** Verify that your console outputs: `Uvicorn running on http://127.0.0.1:8000`. Keep this window open.
 
-### Terminal Window 2: Spin up the Client Interface
+### 🧵 Step 2: Spin Up the Interface Client
 
-Open a completely separate presentation terminal pane environment workspace block to trigger the Next.js development client servers:
+Open a **completely separate terminal window**. Change your target directory path to initialize your development workspace server:
 
 ```bash
 cd Desktop/ai-resume/frontend
@@ -78,17 +84,23 @@ npm run dev
 
 ```
 
-> 🛈 **Verification Anchor:** Your frontend terminal space compiles asset objects instantly and provides route path parameters listening directly at `http://localhost:3000`.
+> **Expected output anchor:** Next.js will compile the dashboard assets and listen directly on port 3000: `http://localhost:3000`.
 
 ---
 
-## 🎮 Interacting with the Interface Layout
+## 🎮 Running a Testing Session
 
-1. Launch your browser application environment step path directly towards: **`http://localhost:3000`**
-2. Click the bright teal **Start Session** button anchor element at the header menu banner bar layout block.
-3. Accept the security tracking alert asking for system video device authorization parameters.
-4. Your panel view changes states instantly, triggering your custom live stream dashboard.
-5. Move around, toggle head axis fields, or type text inside the chat widget to watch parameters stream across the socket nodes in real-time.
+1. Open your web browser and navigate directly to **`http://localhost:3000`**.
+2. Click the teal **Start Session** button located in the upper right-hand corner of the page.
+3. Accept the browser security prompt to authorize local video device access.
+4. Your camera feed will switch to an active **LIVE DATA STREAM**.
+5. Move your head, change your gaze angle, or look away from the screen to watch your dashboard metrics react dynamically in real-time.
+
+---
+
+## 📝 License
+
+This project is open-source and licensed under the terms of the **MIT License**. Feel free to clone, modify, and distribute it as needed.
 
 ```
 
